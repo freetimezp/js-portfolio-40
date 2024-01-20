@@ -361,12 +361,81 @@ header nav a {
 }
 
 
+@media screen and (max-width: 991px ) {
+    #intro .avatar img {
+        transform: translateX(200px);
+    }
+}
 
 
+@media screen and (max-width: 767px ) {
+    body {
+        font-size: 10px;
+    }
+    header nav a {
+        margin: 10px;
+    }
+    #intro .avatar img {
+        transform: none;
+    }
+    #intro .content {
+        left: 20px;
+    }
+    #intro .content .name {
+        font-size: 2em;
+        margin-bottom: .5em;
+    }
+    #intro .content .job {
+        font-size: 3em;
+    }
+    #intro .content i {
+        position: unset;
+        font-size: 10em;
+    }
+    #skill .list {
+        padding: 0;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #skill .list .item:nth-child(odd) {
+        background-color: unset;
+    }
+    #skill .list .item:nth-child(2),
+    #skill .list .item:nth-child(3n) {
+        background-color: #3f2525;
+    }
+    #project .list {
+        padding: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+    #project .list .item img {
+        height: 100px;
+    }
+}
 
+.tab {
+    position: fixed;
+    inset: 0 0 0 0;
+    z-index: 1;
+}
 
+#intro {
+    z-index: 2;
+}
 
+.tab.active {
+    --x: 50%;
+    --y: 50%;
+    clip-path: circle(
+        0 at var(--x) var(--y)
+    );
+    animation: showTab 1s ease-in-out 1 forwards;
+}
 
-
-
-
+@keyframes showTab {
+    to {
+        clip-path: circle(
+            200% at var(--x) var(--y)
+        );
+    }
+}
