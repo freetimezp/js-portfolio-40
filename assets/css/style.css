@@ -316,3 +316,57 @@ header nav a {
 }
 
 
+#contact {
+    background-color: #242330;
+}
+
+#contact .thank {
+    font-size: 5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#contact .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+#contact .desc {
+    width: 500px;
+    max-width: 80%;
+    text-align: center;
+    padding-block: 2em;
+}
+
+#contact .desc a {
+    color: #4875f9;
+}
+
+#contact .list {
+    text-align: center;
+}
+
+#contact .list .item {
+    display: inline-block;
+    margin: 10px 30px;
+}
+
+#contact .list .item i {
+    font-size: 1em;
+    color: #aa5757;
+    transform: translate(-4px,-4px);
+}
+
+
+
+
+
+
+
+
+
+
+
